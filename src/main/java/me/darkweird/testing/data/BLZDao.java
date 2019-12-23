@@ -21,24 +21,25 @@ public class BLZDao {
     private final String GET_ALL_BLZ = "SELECT * FROM BLZ";
 
     public List<BLZ> getBLZs() throws SQLException {
-        PreparedStatement stmt = new PreparedStatementCreatorFactory(GET_ALL_BLZ)
+        try (PreparedStatement stmt = new PreparedStatementCreatorFactory(GET_ALL_BLZ)
                 .newPreparedStatementCreator(new Object[]{})
-                .createPreparedStatement(dataSource.getConnection());
+                .createPreparedStatement(dataSource.getConnection())) {
 
-        if (!stmt.execute()) {
-            // ignore, we use only selects
+            if (!stmt.execute()) {
+                // ignore, we use only selects
+            }
+            List<BLZ> blzs = new LinkedList<>();
+            ResultSet rs = stmt.getResultSet();
+            while (rs.next()) {
+                BLZ blz = new BLZ();
+                blz.setName(rs.getString("name"));
+                blz.setBlzCode(rs.getString("blzCode"));
+                blz.setBic(rs.getString("bic"));
+                blz.setOrt(rs.getString("ort"));
+                blz.setPlz(rs.getString("plz"));
+                blzs.add(blz);
+            }
+            return blzs;
         }
-        List<BLZ> blzs = new LinkedList<>();
-        ResultSet rs = stmt.getResultSet();
-        while (rs.next()) {
-            BLZ blz = new BLZ();
-            blz.setName(rs.getString("name"));
-            blz.setBlzCode(rs.getString("blzCode"));
-            blz.setBic(rs.getString("bic"));
-            blz.setOrt(rs.getString("ort"));
-            blz.setPlz(rs.getString("plz"));
-            blzs.add(blz);
-        }
-        return blzs;
     }
 }
