@@ -43,5 +43,9 @@ public class ExampleTest extends SpringBaseTest {
         Assert.assertEquals(calculatorSoap.divide(2, 2), 1);
     }
 
-
+    @Test(expectedExceptions = NullPointerException.class)
+    public void nullPointerExceptionTest() {
+        CalculatorSoap nullCalcSoap = null;
+        Assert.assertEquals(nullCalcSoap.add(2, 2), 4);
+    }
 }
