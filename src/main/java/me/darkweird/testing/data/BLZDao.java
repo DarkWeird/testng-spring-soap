@@ -19,6 +19,7 @@ public class BLZDao {
     DataSource dataSource;
 
     private final String GET_ALL_BLZ = "SELECT * FROM BLZ";
+    private final String GET_FIRST_BLZ = "SELECT * FROM BLZ LIMIT 1";
 
     public List<BLZ> getBLZs() throws SQLException {
         try (PreparedStatement stmt = new PreparedStatementCreatorFactory(GET_ALL_BLZ)
@@ -44,7 +45,7 @@ public class BLZDao {
     }
 
     public BLZ getFirstBLZ() throws SQLException {
-        try (PreparedStatement stmt = new PreparedStatementCreatorFactory(GET_ALL_BLZ)
+        try (PreparedStatement stmt = new PreparedStatementCreatorFactory(GET_FIRST_BLZ)
                 .newPreparedStatementCreator(new Object[]{})
                 .createPreparedStatement(dataSource.getConnection())) {
 
