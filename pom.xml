@@ -95,12 +95,12 @@
                     <!-- <wsdlFiles> -->
                     <!-- <wsdlFile>myWSDL.wsdl</wsdlFile> -->
                     <!--</wsdlFiles> -->
-                    <!-- Keep generated files -->
+                    <!-- Keep generated.generated files -->
                     <keep>true</keep>
                     <!-- Package name -->
-                    <packageName>generated</packageName>
-                    <!-- generated source files destination-->
-                    <sourceDestDir>src/generated/java</sourceDestDir>
+                    <packageName>generated.generated</packageName>
+                    <!-- generated.generated source files destination-->
+                    <sourceDestDir>src/generated.generated/java</sourceDestDir>
                 </configuration>
             </plugin>
             <plugin>
@@ -116,7 +116,7 @@
                         </goals>
                         <configuration>
                             <sources>
-                                <source>src/generated/java</source>
+                                <source>src/generated.generated/java</source>
                             </sources>
                         </configuration>
                     </execution>

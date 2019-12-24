@@ -1,7 +1,7 @@
 package me.darkweird.testing.service;
 
 
-import generated.DetailsType;
+import generated.generated.DetailsType;
 
 public interface BlzCodeService {
 

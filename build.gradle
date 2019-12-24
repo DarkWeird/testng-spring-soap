@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.3'
+}
+
+ext {
+    springVersion = "5.1.6.RELEASE"
+}
+
+repositories {
+    mavenCentral()
+}
+
+allure {
+    version = '2.2.1'
+    autoconfigure = true
+    aspectjweaver = true
+    allureJavaVersion = 2.13
+}
+
+test {
+    useTestNG()
+}
+
+sourceCompatibility = targetCompatibility = 1.8
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+
+dependencies {
+    compile "org.springframework:spring-core:${springVersion}"
+    compile "org.springframework:spring-context:${springVersion}"
+    compile "org.springframework:spring-jdbc:${springVersion}"
+    compile "org.xerial:sqlite-jdbc:3.8.11.2"
+
+    testCompile "org.springframework:spring-test:${springVersion}"
+    testCompile group: "org.testng", name: "testng", version: "7.0.0"
+    testCompile "io.qameta.allure:allure-testng:2.13.0"
+}

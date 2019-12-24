@@ -1,6 +1,6 @@
 package me.darkweird.testing.spring;
 
-import generated.DetailsType;
+import generated.generated.DetailsType;
 import me.darkweird.testing.data.BLZDao;
 import me.darkweird.testing.model.BLZ;
 import me.darkweird.testing.service.BlzCodeService;

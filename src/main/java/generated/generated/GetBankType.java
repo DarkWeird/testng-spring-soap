@@ -1,5 +1,5 @@
 
-package generated;
+package generated.generated;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for getBankResponseType complex type.
+ * <p>Java class for getBankType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="getBankResponseType">
+ * &lt;complexType name="getBankType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="details" type="{http://thomas-bayer.com/blz/}detailsType"/>
+ *         &lt;element name="blz" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,36 +27,36 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getBankResponseType", propOrder = {
-    "details"
+@XmlType(name = "getBankType", propOrder = {
+    "blz"
 })
-public class GetBankResponseType {
+public class GetBankType {
 
     @XmlElement(required = true)
-    protected DetailsType details;
+    protected String blz;
 
     /**
-     * Gets the value of the details property.
+     * Gets the value of the blz property.
      * 
      * @return
      *     possible object is
-     *     {@link DetailsType }
+     *     {@link String }
      *     
      */
-    public DetailsType getDetails() {
-        return details;
+    public String getBlz() {
+        return blz;
     }
 
     /**
-     * Sets the value of the details property.
+     * Sets the value of the blz property.
      * 
      * @param value
      *     allowed object is
-     *     {@link DetailsType }
+     *     {@link String }
      *     
      */
-    public void setDetails(DetailsType value) {
-        this.details = value;
+    public void setBlz(String value) {
+        this.blz = value;
     }
 
 }

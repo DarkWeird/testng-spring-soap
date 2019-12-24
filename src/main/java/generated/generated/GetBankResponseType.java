@@ -1,5 +1,5 @@
 
-package generated;
+package generated.generated;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for getBankType complex type.
+ * <p>Java class for getBankResponseType complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="getBankType">
+ * &lt;complexType name="getBankResponseType">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="blz" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="details" type="{http://thomas-bayer.com/blz/}detailsType"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,36 +27,36 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getBankType", propOrder = {
-    "blz"
+@XmlType(name = "getBankResponseType", propOrder = {
+    "details"
 })
-public class GetBankType {
+public class GetBankResponseType {
 
     @XmlElement(required = true)
-    protected String blz;
+    protected DetailsType details;
 
     /**
-     * Gets the value of the blz property.
+     * Gets the value of the details property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link DetailsType }
      *     
      */
-    public String getBlz() {
-        return blz;
+    public DetailsType getDetails() {
+        return details;
     }
 
     /**
-     * Sets the value of the blz property.
+     * Sets the value of the details property.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link DetailsType }
      *     
      */
-    public void setBlz(String value) {
-        this.blz = value;
+    public void setDetails(DetailsType value) {
+        this.details = value;
     }
 
 }

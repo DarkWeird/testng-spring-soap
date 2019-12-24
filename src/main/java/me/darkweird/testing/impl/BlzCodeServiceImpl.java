@@ -1,7 +1,7 @@
 package me.darkweird.testing.impl;
 
-import generated.BLZServicePortType;
-import generated.DetailsType;
+import generated.generated.BLZServicePortType;
+import generated.generated.DetailsType;
 import me.darkweird.testing.service.BlzCodeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
