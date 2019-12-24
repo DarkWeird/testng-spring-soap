@@ -32,7 +32,7 @@ public class TestCalc extends SpringBaseTest{
     }
 
     @Test
-    public void testSoapAddBinary(){
-        Assert.assertEquals(calculator.getCalculatorSoap().add(0b010,0b010),4);
+    public void testSoapAddMinusNumbers(){
+        Assert.assertEquals(calculator.getCalculatorSoap().add(-10,-456),-466);
     }
 }
