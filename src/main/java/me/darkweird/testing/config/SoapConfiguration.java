@@ -5,6 +5,8 @@ import generated.BLZServicePortType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import tempuri.Calculator;
+import tempuri.CalculatorSoap;
 
 @Configuration
 public class SoapConfiguration {
@@ -16,8 +18,22 @@ public class SoapConfiguration {
 
     @Bean
     @Autowired
-    public BLZServicePortType blzServicePortType(BLZService blzService){
+    public BLZServicePortType blzServicePortType(BLZService blzService) {
         return blzService.getBLZServiceSOAP11PortHttp();
     }
-}
+
+
+    @Bean
+    public Calculator calculatorService(){
+        return  new  Calculator();
+        }
+
+    @Bean
+    @Autowired
+    public CalculatorSoap calculatorSoapService (Calculator calculator){
+        return calculator.getCalculatorSoap();
+        }
+
+
+    }
 
