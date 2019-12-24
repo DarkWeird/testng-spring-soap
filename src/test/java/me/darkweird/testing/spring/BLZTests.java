@@ -29,4 +29,6 @@ public class BLZTests extends SpringBaseTest {
         Assert.assertEquals(detailsType.getOrt(), blz.getOrt());
         Assert.assertEquals(detailsType.getPlz(), blz.getPlz());
     }
+
+
 }
