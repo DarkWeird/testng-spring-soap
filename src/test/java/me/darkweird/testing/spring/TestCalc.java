@@ -11,22 +11,22 @@ public class TestCalc extends SpringBaseTest {
    CalculatorSoap calculatorSoap;
 
    @Test
-    public void Add(){
+    public void add(){
       Assert.assertEquals(calculatorSoap.add(2,2), 4);
    }
 
    @Test
-   public void Divide(){
+   public void divide(){
       Assert.assertEquals(calculatorSoap.divide(3,3), 1);
    }
 
    @Test
-   public void Multiply(){
+   public void multiply(){
       Assert.assertEquals(calculatorSoap.multiply(3,3), 9);
    }
 
    @Test
-   public void Subtract(){
+   public void subtract(){
       Assert.assertEquals(calculatorSoap.subtract(5,3), 2);
    }
 }
