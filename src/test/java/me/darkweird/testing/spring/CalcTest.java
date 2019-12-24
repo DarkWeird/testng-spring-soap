@@ -58,7 +58,8 @@ public class CalcTest extends SpringBaseTest {
         Assert.assertEquals(calculatorSoap.add(Integer.MAX_VALUE,1),Integer.MAX_VALUE);
     }
 
-
-
-
+    @Test
+    public void negNumPosAddTest(){
+        Assert.assertEquals(calculatorSoap.add(-3,-5),-8);
+    }
 }

@@ -32,7 +32,7 @@ public class BLZTests extends SpringBaseTest {
 
     @Test
     public void test2() throws SQLException {
-        BLZ blz = dao.getBLZs().get(0);
+        BLZ blz = dao.getFirstBLZ();
         DetailsType detailsType = blzCodeService.getBank(blz.getBlzCode());
         Assert.assertEquals(detailsType.getBezeichnung(), blz.getName());
         Assert.assertEquals(detailsType.getBic(), blz.getBic());

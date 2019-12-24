@@ -42,4 +42,23 @@ public class BLZDao {
             return blzs;
         }
     }
+
+    public BLZ getFirstBLZ() throws SQLException {
+        try (PreparedStatement stmt = new PreparedStatementCreatorFactory(GET_ALL_BLZ)
+                .newPreparedStatementCreator(new Object[]{})
+                .createPreparedStatement(dataSource.getConnection())) {
+
+            if (!stmt.execute()) {
+                // ignore, we use only selects
+            }
+            ResultSet rs = stmt.getResultSet();
+            BLZ blz = new BLZ();
+            blz.setName(rs.getString("name"));
+            blz.setBlzCode(rs.getString("blzCode"));
+            blz.setBic(rs.getString("bic"));
+            blz.setOrt(rs.getString("ort"));
+            blz.setPlz(rs.getString("plz"));
+            return blz;
+        }
+    }
 }
