@@ -11,32 +11,32 @@ public class CalculatorTest extends SpringBaseTest {
 
 
     @Autowired
-        CalculatorSoap calculatorSoap;
+    CalculatorSoap calculatorSoap;
 
     @Test(expectedExceptions = ServerSOAPFaultException.class)
-        public void testDivideByZero() {
+    public void testDivideByZero() {
         calculatorSoap.divide(5, 0);
-        }
+    }
 
     @Test()
-        public void testAdd() {
+    public void testAdd() {
         Assert.assertEquals(calculatorSoap.add(5, 2), 7);
-        }
+    }
 
     @Test()
-        public void testAddMinus() {
+    public void testAddMinus() {
         Assert.assertEquals(calculatorSoap.add(-5, -2), -7);
-        }
+    }
 
     @Test()
-        public void testMultiply() {
+    public void testMultiply() {
         Assert.assertEquals(calculatorSoap.multiply(5, 2), 10);
-        }
+    }
 
     @Test()
-        public void testMinus() {
+    public void testMinus() {
         Assert.assertEquals(calculatorSoap.subtract(5, 2), 3);
-        }
+    }
 }
 
 
