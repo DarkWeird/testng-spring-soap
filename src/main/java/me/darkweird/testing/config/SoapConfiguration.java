@@ -12,25 +12,25 @@ import org.tempuri.CalculatorSoap;
 public class SoapConfiguration {
 
     @Bean
-    public BLZService blzService(){
+        public BLZService blzService(){
         return new BLZService();
-    }
+        }
 
     @Bean
     @Autowired
-    public BLZServicePortType blzServicePortType(BLZService blzService){
-        return blzService.getBLZServiceSOAP11PortHttp();
-    }
+        public BLZServicePortType blzServicePortType(BLZService blzService){
+            return blzService.getBLZServiceSOAP11PortHttp();
+        }
 
     @Bean
-    public Calculator calcService(){
-        return new Calculator();
-    }
+        public Calculator calcService(){
+            return new Calculator();
+        }
 
     @Bean
     @Autowired
-    public CalculatorSoap calcSoapService(Calculator calculator){
-        return calculator.getCalculatorSoap();
-    }
+        public CalculatorSoap calcSoapService(Calculator calculator){
+            return calculator.getCalculatorSoap();
+        }
 
 }

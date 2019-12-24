@@ -10,10 +10,10 @@ import org.testng.annotations.Test;
 public class ExampleTest extends SpringBaseTest {
 
     @Autowired
-    ExampleService exampleService;
+        ExampleService exampleService;
 
     @Test
-    public void exampleTest() {
+        public void exampleTest() {
         Assert.assertEquals(exampleService.returnsFour(), 4);
     }
 }
