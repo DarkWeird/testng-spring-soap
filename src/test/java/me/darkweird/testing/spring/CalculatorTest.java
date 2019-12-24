@@ -20,14 +20,29 @@ public class CalculatorTest extends SpringBaseTest{
     Calculator calculator;
 
     @Test(expectedExceptions = ServerSOAPFaultException.class)
-        public void testDivideByZero(){
+    public void testDivideByZero(){
             calculator.getCalculatorSoap().divide(5, 0);
         }
 
     @Test()
     public void testAdd(){
         Assert.assertEquals(calculator.getCalculatorSoap().add(5, 2), 7);
-}
     }
+
+    @Test()
+    public void testAddMinus(){
+        Assert.assertEquals(calculator.getCalculatorSoap().add(-5, -2), -7);
+    }
+
+    @Test()
+    public void testMultiply(){
+        Assert.assertEquals(calculator.getCalculatorSoap().multiply(5, 2), 10);
+    }
+
+    @Test()
+    public void testMinus(){
+        Assert.assertEquals(calculator.getCalculatorSoap().subtract(5, 2), 3);
+    }
+}
 
 
