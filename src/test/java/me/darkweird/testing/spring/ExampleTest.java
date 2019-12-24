@@ -1,6 +1,7 @@
 package me.darkweird.testing.spring;
 
 
+import me.darkweird.testing.calc.Calculator;
 import me.darkweird.testing.service.CalculatorSoap;
 import me.darkweird.testing.service.ExampleService;
 import org.springframework.beans.factory.annotation.Autowired;
