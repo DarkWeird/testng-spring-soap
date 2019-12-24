@@ -69,40 +69,6 @@
                     <release>1.8</release>
                 </configuration>
             </plugin>
-            <!-- usage of jax-ws maven plugin-->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>jaxws-maven-plugin</artifactId>
-                <version>1.12</version>
-                <executions>
-                    <execution>
-                        <id>wsimport-from-jdk</id>
-                        <goals>
-                            <goal>wsimport</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <!-- using wsdl from an url -->
-                    <wsdlUrls>
-                        <wsdlUrl>
-                            http://www.thomas-bayer.com/axis2/services/BLZService?wsdl
-                        </wsdlUrl>
-                    </wsdlUrls>
-                    <!-- or using wsdls file directory -->
-                    <!-- <wsdlDirectory>src/wsdl</wsdlDirectory> -->
-                    <!-- which wsdl file -->
-                    <!-- <wsdlFiles> -->
-                    <!-- <wsdlFile>myWSDL.wsdl</wsdlFile> -->
-                    <!--</wsdlFiles> -->
-                    <!-- Keep generated files -->
-                    <keep>true</keep>
-                    <!-- Package name -->
-                    <packageName>generated</packageName>
-                    <!-- generated source files destination-->
-                    <sourceDestDir>src/generated/java</sourceDestDir>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
