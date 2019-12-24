@@ -2,7 +2,6 @@ package me.darkweird.testing.spring;
 
 import com.sun.xml.ws.fault.ServerSOAPFaultException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.Robar3.CalculatorSoap;

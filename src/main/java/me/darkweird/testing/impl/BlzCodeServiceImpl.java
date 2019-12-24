@@ -5,7 +5,6 @@ import generated.DetailsType;
 import me.darkweird.testing.service.BlzCodeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.Robar3.CalculatorSoap;
 
 
 @Service
