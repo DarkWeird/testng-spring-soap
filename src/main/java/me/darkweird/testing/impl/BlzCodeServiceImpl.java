@@ -17,4 +17,5 @@ public class BlzCodeServiceImpl implements BlzCodeService {
     public DetailsType getBank(String blz) {
         return blzServicePortType.getBank(blz);
     }
+
 }
