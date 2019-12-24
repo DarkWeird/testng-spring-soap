@@ -22,7 +22,7 @@ public class JDBCConfiguration {
 
     @Bean
     public DataSource dataSource() {
-        DriverManagerDataSource dmds = new DriverManagerDataSource("jdbc:sqliteblzcode.db");
+        DriverManagerDataSource dmds = new DriverManagerDataSource("jdbc:sqlite:blzcode.db");
         dmds.setDriverClassName("org.sqlite.JDBC");
         return dmds;
     }
