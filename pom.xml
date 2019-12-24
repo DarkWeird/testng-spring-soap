@@ -48,7 +48,7 @@
             <artifactId>sqlite-jdbc</artifactId>
             <version>3.8.11.2</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.sun.xml.ws/jaxws-rt -->
+
         <dependency>
             <groupId>com.sun.xml.ws</groupId>
             <artifactId>jaxws-rt</artifactId>

@@ -11,8 +11,6 @@ import ru.Robar3.CalculatorSoap;
 @Service
 public class BlzCodeServiceImpl implements BlzCodeService {
 
-//    @Autowired
-//    CalculatorSoap calculatorSoap;
     @Autowired
     BLZServicePortType blzServicePortType;
 
@@ -20,8 +18,5 @@ public class BlzCodeServiceImpl implements BlzCodeService {
     public DetailsType getBank(String blz) {
         return blzServicePortType.getBank(blz);
     }
-//    @Override
-//    public DetailsType getCalculatorSoap(String calc){
-//        return calculatorSoap.
-//    }
+
 }
