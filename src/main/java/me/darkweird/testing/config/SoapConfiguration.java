@@ -23,14 +23,14 @@ public class SoapConfiguration {
     }
 
     @Bean
-    public Calculator calculator(){
+    public Calculator calcService(){
         return new Calculator();
     }
 
     @Bean
     @Autowired
-    public CalculatorSoap calculatorSoap(Calculator calculator){
+    public CalculatorSoap calcSoapService(Calculator calculator){
         return calculator.getCalculatorSoap();
     }
-}
 
+}
