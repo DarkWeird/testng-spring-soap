@@ -19,6 +19,7 @@ public class BLZDao {
     DataSource dataSource;
 
     private final String GET_ALL_BLZ = "SELECT * FROM BLZ";
+    private final String GET_FIRST_BLZ = "SELECT * FROM BLZ LIMIT 1";
 
     public List<BLZ> getBLZs() throws SQLException {
         try (PreparedStatement stmt = new PreparedStatementCreatorFactory(GET_ALL_BLZ)
@@ -40,6 +41,25 @@ public class BLZDao {
                 blzs.add(blz);
             }
             return blzs;
+        }
+    }
+
+    public BLZ getFirstBLZ() throws SQLException {
+        try (PreparedStatement stmt = new PreparedStatementCreatorFactory(GET_FIRST_BLZ)
+                .newPreparedStatementCreator(new Object[]{})
+                .createPreparedStatement(dataSource.getConnection())) {
+
+            if (!stmt.execute()) {
+                // ignore, we use only selects
+            }
+            ResultSet rs = stmt.getResultSet();
+            BLZ blz = new BLZ();
+            blz.setName(rs.getString("name"));
+            blz.setBlzCode(rs.getString("blzCode"));
+            blz.setBic(rs.getString("bic"));
+            blz.setOrt(rs.getString("ort"));
+            blz.setPlz(rs.getString("plz"));
+            return blz;
         }
     }
 }

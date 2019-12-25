@@ -29,4 +29,14 @@ public class BLZTests extends SpringBaseTest {
         Assert.assertEquals(detailsType.getOrt(), blz.getOrt());
         Assert.assertEquals(detailsType.getPlz(), blz.getPlz());
     }
+
+    @Test
+    public void test2() throws SQLException {
+        BLZ blz = dao.getFirstBLZ();
+        DetailsType detailsType = blzCodeService.getBank(blz.getBlzCode());
+        Assert.assertEquals(detailsType.getBezeichnung(), blz.getName());
+        Assert.assertEquals(detailsType.getBic(), blz.getBic());
+        Assert.assertEquals(detailsType.getOrt(), blz.getOrt());
+        Assert.assertEquals(detailsType.getPlz(), blz.getPlz());
+    }
 }
