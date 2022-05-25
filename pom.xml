@@ -8,7 +8,7 @@
     <artifactId>testng-spring-soap</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <spring.version>4.1.6.RELEASE</spring.version>
+        <spring.version>5.2.22.RELEASE</spring.version>
         <testng.version>6.11</testng.version>
         <aspectj.version>1.8.10</aspectj.version>
     </properties>
